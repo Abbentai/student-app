@@ -1,3 +1,4 @@
+/* Divs */
 .container{
     display: flex;
     min-height: 90vh;
@@ -7,6 +8,12 @@
     justify-content: center;
     flex-direction: column;
 }
+
+.opener{
+    text-align: center;
+}
+
+
 
 .textBox{
     display: flex;

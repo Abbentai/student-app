@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Colleges;
+use App\Http\Controllers\Students;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +15,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Root
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
+
+// Student Routes
+Route::get('/Students', [Students::class, 'index'])->name('students.index');
+
+// College Routes
+Route::get('/Colleges', [Colleges::class, 'index'])->name('colleges.index');

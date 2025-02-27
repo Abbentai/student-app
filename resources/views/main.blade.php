@@ -22,13 +22,13 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link @if(Route::currentRouteName() == '') active @endif" aria-current="page" href="/">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Students</a>
+                        <a class="nav-link @if(Route::currentRouteName() == 'students.index') active @endif" href="{{ route('students.index') }}">Students</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Colleges</a>
+                        <a class="nav-link @if(Route::currentRouteName() == 'colleges.index') active @endif" href="{{ route('colleges.index') }}"">Colleges</a>
                     </li>
                 </ul>
             </div>
@@ -39,9 +39,8 @@
 
 <body>
     <div class="container">
-        <div class="textBox">
-            <h1>oml its a master view no way</h1>
-        </div>
+        @yield('content')
+    
     </div>
 </body>
 
