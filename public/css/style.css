@@ -1,0 +1,20 @@
+.container{
+    display: flex;
+    min-height: 90vh;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.textBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
+    background-color: rgb(180, 214, 245);
+    min-height: 200px;
+    height: 40vh;
+}
