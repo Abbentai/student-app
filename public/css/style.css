@@ -5,15 +5,14 @@
     height: auto;
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
+    margin-top: 50px;
+    gap: 20px;
 }
 
 .opener{
     text-align: center;
 }
-
-
 
 .textBox{
     display: flex;
@@ -24,4 +23,21 @@
     background-color: rgb(180, 214, 245);
     min-height: 200px;
     height: 40vh;
+}
+
+.card{
+    min-width: 250px;
+}
+
+/* Misc */
+.cardSplitter{
+    display: flex;
+}
+
+.flexColumn{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 5px;
+    gap: 4px;
 }
