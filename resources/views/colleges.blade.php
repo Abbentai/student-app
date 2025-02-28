@@ -33,9 +33,6 @@
                 </div>
             </div>
         </div>
-
-
-
     @endforeach
 
     <button type="button" class="btn btn-secondary btn-lg">+ Add College</button>

@@ -13,16 +13,11 @@ class Colleges extends Controller
         return view('colleges', compact('colleges'));
     }
 
-    //Creates a new College object and returns the creation screen for the user to insert college details
+    //Creates a new College object and returns the creation screen for the user to insert College details
     public function create(){
         return view('colleges');
     }
     
-    //Views a specific College
-    public function view(){
-        return view('colleges');
-    }
-
     //Validates and stores the College object created by the user in the database
     public function store(Request $request){
         return view('colleges');
@@ -33,13 +28,8 @@ class Colleges extends Controller
         return view('colleges');
     }
     
-    //Updates an existing college in the database
+    //Updates an existing College in the database
     public function update(Request $request){
-        return view('colleges');
-    }
-
-    //Drops an existing college based on the id
-    public function destroy($id){
         return view('colleges');
     }
 
