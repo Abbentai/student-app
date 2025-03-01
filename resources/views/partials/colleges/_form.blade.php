@@ -15,11 +15,11 @@
     <label for="address" class="form-label">Address</label>
     <input type="text" class="form-control @error('address') is-invalid @enderror" id="address" name="address" value="{{ old('address', $college->address) }}"
     aria-describedby="address">
-    @error('name')
+    @error('address')
         <div class="invalid-feedback">
             {{ $message }}
         </div>
     @enderror
 </div>
 
-<button type="submit" class="btn btn-primary">Submit</button>
+<button type="submit" class="btn btn-success">Submit</button>

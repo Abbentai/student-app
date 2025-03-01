@@ -1,12 +1,13 @@
 @extends('main')
 
 @section('content')
-    <h2><b>Create New College</b></h2>
+    <h2><b>Edit Student {{$student->name}}</b></h2>
 
-    <form action="{{ route('colleges.store') }}" method="POST">
+    <form action="{{ route('students.update', $student->id) }}" method="POST">
         <div class="formDiv">
+            @method('PUT')
             @csrf
-            @include('partials.colleges._form')
+            @include('partials.students._form')
         </div>
     </form>
 

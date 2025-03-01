@@ -7,7 +7,7 @@
         <div class="formDiv">
             @method('PUT')
             @csrf
-            @include('partials._form')
+            @include('partials.colleges._form')
         </div>
     </form>
 

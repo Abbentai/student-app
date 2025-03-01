@@ -61,6 +61,5 @@ class Colleges extends Controller
         $college->delete();
 
         return back()->with('message', 'College ' . $college->name . ' has been deleted successfully'); //returns to previous page
-
     }
 }

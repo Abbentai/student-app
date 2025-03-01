@@ -42,5 +42,7 @@
         @csrf
     </form>
 
-    <a type="button" class="btn btn-secondary btn-lg" href="{{ route('colleges.create') }}">+ Add College</a>
+    <a type="button" class="btn btn-secondary btn-lg buttonAlign" href="{{ route('colleges.create') }}">
+        <i class="bi bi-plus"></i>
+        Add College</a>
 @endsection
