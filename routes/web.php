@@ -28,6 +28,9 @@ Route::get('/Students', [Students::class, 'index'])->name('students.index');
 //Returns student creation page
 Route::get('/Students/Create', [Students::class, 'create'])->name('students.create');
 
+//Returns student viewing page based on the id
+Route::get('/Students/View/{id}', [Students::class, 'view'])->name('students.view');
+
 //Returns student editing page based on the id
 Route::get('/Students/Edit/{id}', [Students::class, 'edit'])->name('students.edit');
 
@@ -48,6 +51,9 @@ Route::get('/Colleges', [Colleges::class, 'index'])->name('colleges.index');
 
 //Returns college creation page
 Route::get('/Colleges/Create', [Colleges::class, 'create'])->name('colleges.create');
+
+//Returns college viewing page based on the id
+Route::get('/Colleges/View/{id}', [Colleges::class, 'view'])->name('colleges.view');    
 
 //Returns college editing page based on the id
 Route::get('/Colleges/Edit/{id}', [Colleges::class, 'edit'])->name('colleges.edit');

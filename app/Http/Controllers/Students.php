@@ -9,10 +9,27 @@ use App\Models\College;
 
 class Students extends Controller
 {
+    //Returns students depending on the request filters that are given in the url, either by college id or whether to sort by names ascending
     public function index()
     {
-        $students = Student::orderBy('id')->get();
-        return view('students.index', compact('students'));
+        $colleges = College::orderBy('name')->get();
+
+        $collegeID = request(key: 'college_id');
+        $nameSort = request('sort_by');
+
+        if($collegeID != null && $nameSort != null){
+            $students = Student::where("college_id", $collegeID)->orderBy('name')->get();
+        }
+        else if ($collegeID != null){
+            $students = Student::where("college_id", $collegeID)->get();
+        }
+        else if ($nameSort != null){
+            $students = Student::orderBy('name')->get();
+        }
+        else{
+            $students = Student::all();
+        }
+        return view('students.index', compact('students', 'colleges'));
     }
 
     //Creates a new Student object so that the view can properly load due to the old methods
@@ -36,6 +53,13 @@ class Students extends Controller
         return redirect()->route('students.index')->with('message', 'Student ' . $request->name . ' has been added successfully');
     }
     
+    //Fetches the Student that is going to be viewed by the user from the database and returns the view screen
+    public function view($id){
+        $student = Student::find($id);
+        $colleges = College::orderBy('name')->get();
+        return view('students.view', compact('student', 'colleges'));
+    }
+
     //Fetches the Student that is going to be edited by the user from the database and returns the edit screen
     public function edit($id){
         $student = Student::find($id);

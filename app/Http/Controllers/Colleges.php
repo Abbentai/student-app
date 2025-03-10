@@ -33,6 +33,13 @@ class Colleges extends Controller
         return redirect()->route('colleges.index')->with('message', 'College ' . $request->name . ' has been added successfully');
     }
 
+    //Fetches the College that is going to be viewed by the user from the database and returns the view screen
+    public function view($id)
+    {
+        $college = College::find($id);
+        return view('colleges.view', compact('college'));
+    }
+
     //Fetches the College that is going to be edited by the user from the database and returns the edit screen
     public function edit($id)
     {

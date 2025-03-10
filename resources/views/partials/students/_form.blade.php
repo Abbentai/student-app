@@ -45,21 +45,22 @@
     </div>
 
     <div class="mb-2">
-    <label for="college_id" class="form-label">College</label>
-    <select class="form-select @error('college_id') is-invalid @enderror" name="college_id" id="college_id">
-        {{-- Default option --}}
-        <option value="">Select a College</option> 
-        {{-- Populates each College as an option with value being id and the name being shown --}}
-        @foreach ($colleges as $college)
-            <option value="{{ $college->id }}" {{ old('college_id', $student->college_id) == $college->id ? 'selected' : '' }}>
-                {{ $college->name }}
-            </option>
-        @endforeach
-    </select>
-    @error('college_id')
-        <div class="invalid-feedback">{{ $message }}</div>
-    @enderror
-</div>
+        <label for="college_id" class="form-label">College</label>
+        <select class="form-select @error('college_id') is-invalid @enderror" name="college_id" id="college_id">
+            {{-- Default option --}}
+            <option value="">Select a College</option>
+            {{-- Populates each College as an option with value being id and the name being shown --}}
+            @foreach ($colleges as $college)
+                <option value="{{ $college->id }}"
+                    {{ old('college_id', $student->college_id) == $college->id ? 'selected' : '' }}>
+                    {{ $college->name }}
+                </option>
+            @endforeach
+        </select>
+        @error('college_id')
+            <div class="invalid-feedback">{{ $message }}</div>
+        @enderror
+    </div>
 
 </div>
 

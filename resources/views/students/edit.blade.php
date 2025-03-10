@@ -11,5 +11,5 @@
         </div>
     </form>
 
-    <a type="button" class="btn btn-secondary btn-lg" href="{{ route('colleges.index') }}">Go Back</a>
+    <a type="button" class="btn btn-secondary btn-lg" href="{{ route('students.index') }}">Go Back</a>
 @endsection

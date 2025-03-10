@@ -1,13 +1,13 @@
 @extends('main')
 
 @section('content')
-    <h2><b>Colleges</b></h2>
-
     @if ($message = session('message'))
         <div class="alert alert-primary" role="alert">
             {{ $message }}
         </div>
     @endif
+
+    <h2><b>Colleges</b></h2>
 
     @foreach ($colleges as $key => $college)
         <div class="card">
@@ -26,7 +26,8 @@
 
                 {{-- Stacks the buttons vertically --}}
                 <div class="flexColumn">
-                    {{-- <a class="btn btn-sm btn-circle btn-outline-info" title="Show"><i class="bi bi-eye"></i></i></a> --}}
+                    <a class="btn btn-sm btn-circle btn-outline-info" title="Show"
+                        href="{{ route('colleges.view', $college->id) }}"><i class="bi bi-eye"></i></i></a>
                     <a class="btn btn-sm btn-circle btn-outline-secondary" title="Edit"
                         href="{{ route('colleges.edit', $college->id) }}">
                         <i class="bi bi-pencil-square"></i></a>
