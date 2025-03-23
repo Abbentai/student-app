@@ -1,11 +1,28 @@
+/* Navbar */
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 3000;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.397);
+
+}
+
+/* Divs */
 .container{
     display: flex;
     min-height: 90vh;
     height: auto;
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
+    margin-top: 100px;
+    gap: 20px;
+}
+
+.opener{
+    text-align: center;
 }
 
 .textBox{
@@ -17,4 +34,65 @@
     background-color: rgb(180, 214, 245);
     min-height: 200px;
     height: 40vh;
+}
+
+.card{
+    min-width: 250px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.397);
+
+}
+
+.filterDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4%;
+    padding: 5px;
+    gap: 10px;
+    background-color: rgb(233, 232, 232);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.397);
+}
+
+.formDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    min-width: 400px;
+    border-radius: 4%;
+    background-color: rgb(233, 232, 232);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.397);
+}
+
+/* Misc */
+.cardSplitter{
+    display: flex;
+}
+
+.flexColumn{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 5px;
+    gap: 4px;
+}
+
+.nameBtnHeight{
+    height: 32px;
+}
+
+.buttonAlign{
+    margin-bottom: 50px;
+}
+
+.form-select:hover{
+    cursor: pointer;
+}
+
+.filters{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
